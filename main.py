@@ -36,7 +36,7 @@ if today_tuple in birthdays_dict:
         msg['From'] = MY_EMAIL
         msg['To'] = birthday_person["email"]
         msg['Subject'] = "Happy Birthday"
-        msg['Cc'] = my_email
+        msg['Cc'] = MY_EMAIL
         msg.attach(MIMEText(contents, 'plain'))
         connection.starttls()
         connection.login(MY_EMAIL, MY_PASSWORD)
