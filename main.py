@@ -31,7 +31,7 @@ if today_tuple in birthdays_dict:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
 
-    with smtplib.SMTP("YOUR EMAIL PROVIDER SMTP SERVER ADDRESS") as connection:
+    with smtplib.SMTP('smtp.mail.yahoo.com', 587) as connection:
         msg = MIMEMultipart()
         msg['From'] = MY_EMAIL
         msg['To'] = birthday_person["email"]
